@@ -1,0 +1,59 @@
+{
+  "created_on": "2026-10-25",
+  "sources": {
+    "_illumination.py": {
+      "source": "research/interventions/local_illumination.py",
+      "source_sha256": "e7f751f4b8533cbbc2e735c51324d23f0c61c93bee7034797d1f31573fd5f5b4",
+      "adaptations": [
+        "中文注释"
+      ],
+      "adapted_sha256": "de789d6b924b689887370ce1826d09d07e9ffce4609e076d56b3fc78e40c43aa"
+    },
+    "_weather.py": {
+      "source": "research/interventions/scenario_augmentation.py",
+      "source_sha256": "4ec312c8816c9200e8adf0244fb4580a55fc4b6b6e258060bc31ce363fa6f67e",
+      "adaptations": [
+        "中文注释",
+        "weather校验器改为包内相对导入"
+      ],
+      "adapted_sha256": "522f832f4389592789cc105d625c6a665bba3ad3f2e27b9061ff02b289e337af"
+    },
+    "_layers.py": {
+      "source": "research/interventions/layer_overlay.py",
+      "source_sha256": "1ea6bf8a3b93803757fa2092c70fb7342cde33da4be6af207d26ee277b736cda",
+      "adapted_sha256": "167ce6fe579968045dcee8cfa05c580000b30dc1e1d580490425706caae9b24c",
+      "adaptations": [
+        "生产包内相对导入，不依赖research",
+        "支持三种内存渲染消融及可选掩膜",
+        "使用当前配置的图层尺寸和参考粒子视场",
+        "默认六类场景，旧夜雨保留显式兼容"
+      ]
+    }
+  },
+  "historical_files_modified": false,
+  "role": "self-contained six-scene layer overlay module; reference renderer retained for historical comparison",
+  "method_version": "scene_illumination_v002_layers",
+  "integration": "small gain/bias fields and color matrix fused in linear RGB; images-only export; no detector integration",
+  "version_history": [
+    {
+      "version": "scene_illumination_v001",
+      "date": "2026-10-25",
+      "renderer": "reference"
+    },
+    {
+      "version": "scene_illumination_v002_layers",
+      "date": "2026-10-27",
+      "renderer": "layers",
+      "default_scenes": [
+        "sunny",
+        "overcast",
+        "night",
+        "rain",
+        "fog",
+        "snowfall"
+      ],
+      "export": "images_only",
+      "default_outputs_per_input": 6
+    }
+  ]
+}

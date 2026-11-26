@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.cache/
+.pytest_cache/
+.ruff_cache/
+.venv/
+.idea/
+.env
+.env.*
+*.pth
+*.pt
+*.safetensors
+*.onnx
+checkpoints/
+dataset/
+pretrained/
+results/

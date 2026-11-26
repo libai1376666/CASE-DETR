@@ -1,0 +1,18 @@
+{
+  "module": "SCAA",
+  "module_version": "scene_illumination_v002_layers",
+  "source": "code/selfmodules/SCAA/scene_illumination",
+  "integration": "frozen model-local renderer; current training uses original plus six fixed scenes (7N), off uses N; legacy sampling retained only for historical revisions",
+  "files_sha256": {
+    "scaa/scaa_core/__init__.py": "da7b9a294ae7b90d2721aebc29852f31a5944de5340f480e60e4b5e40a580285",
+    "scaa/scaa_core/_illumination.py": "de789d6b924b689887370ce1826d09d07e9ffce4609e076d56b3fc78e40c43aa",
+    "scaa/scaa_core/_layers.py": "167ce6fe579968045dcee8cfa05c580000b30dc1e1d580490425706caae9b24c",
+    "scaa/scaa_core/_weather.py": "522f832f4389592789cc105d625c6a665bba3ad3f2e27b9061ff02b289e337af",
+    "scaa/scaa_core/pipeline.py": "74145d88e887b29bad46c95e056f634b1f5e76fab4a3a6d21554ba29e52f9be0",
+    "scaa/scaa_core/provenance.json": "846aa79162d199cf1ea1b130dd53a5b1e20aca40ed610e0499f1fa222c0beffa"
+  },
+  "dependencies_added": false,
+  "trained": false,
+  "training_view_policy": "original_plus_six_v1",
+  "method_version": "v004_scaa_seven"
+}
